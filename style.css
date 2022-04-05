@@ -4,8 +4,13 @@ body {
 
 h1 {
     color: cornflowerblue;
+    transition:color .5s ease-in-out;
 }
 
-.active {
-    color:tomato\;
+.clicked {
+    color:tomato;
+}
+
+.ex-font {
+    font-family: 'Courier New', Courier, monospace;
 }
