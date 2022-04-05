@@ -1,22 +1,15 @@
-const h1 = document.querySelector('div.hello:first-child h1');
-h1.addEventListener('click', function() {
-    const clickedClass = 'clicked';
-    // if (h1.className.contains(clickedClass)) {
-    //     h1.classList.remove(clickedClass);
-    // } else {
-    //     h1.className.add(clickedClass);
-    // }
-    h1.classList.toggle(clickedClass);
-});
-h1.addEventListener('mouseenter', function() {
-    h1.innerText = 'Mouse is here!';
-});
-h1.addEventListener('mouseleave', function() {
-    h1.innerText = 'Mouse is gone!';
-});
-window.addEventListener('resize', function() {
-    this.document.body.style.backgroundColor = 'tomato';
-});
-window.addEventListener('copy', function() {
-    alert('copier!');
+// const loginForm = document.getElementById("login-form");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button");
+
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+loginButton.addEventListener("click", function(event) {
+    const username = loginInput.value;
+    if (username === "") {
+        alert("Please wrtie your name.");
+    } else if (username.length > 15) {
+        alert("Your name is too long.")
+    }
 });
